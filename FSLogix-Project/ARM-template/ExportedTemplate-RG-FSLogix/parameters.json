@@ -1,0 +1,45 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "virtualMachines_VM01_AVD_name": {
+            "value": null
+        },
+        "virtualMachines_VM02_AVD_0_name": {
+            "value": null
+        },
+        "networkInterfaces_vm01_avd420_name": {
+            "value": null
+        },
+        "publicIPAddresses_VM01_AVD_ip_name": {
+            "value": null
+        },
+        "virtualNetworks_VM01_AVD_vnet_name": {
+            "value": null
+        },
+        "storageAccounts_storagefslogic_name": {
+            "value": null
+        },
+        "hostpools_HP01_AVD_name": {
+            "value": null
+        },
+        "networkInterfaces_VM02_AVD_0_nic_name": {
+            "value": null
+        },
+        "workspaces_WP01_AVD_name": {
+            "value": null
+        },
+        "networkSecurityGroups_VM01_AVD_nsg_name": {
+            "value": null
+        },
+        "networkSecurityGroups_VM01AVDnsg219_name": {
+            "value": null
+        },
+        "applicationgroups_HP01_AVD_DAG_name": {
+            "value": null
+        },
+        "networkSecurityGroups_VM02_AVD_nsg_a9025275_cc7d_417b_bcbd_e9a96309c298_name": {
+            "value": null
+        }
+    }
+}
