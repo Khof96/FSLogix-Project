@@ -18,7 +18,7 @@ This guide covers the end-to-end process of setting up an Azure Virtual Desktop 
    - Set up a file share in Azure storage and ensure it is joined to the domain to support FSLogix profile storage.
 
 5. **Creating a Virtual Machine for AVD:**
-   - Step-by-step instructions on how to create a virtual machine in Azure tailored for the AVD environment.
+   - Create a virtual machine in Azure tailored for the AVD environment.
 
 6. **Setting Permissions:**
    - Set the required NTFS and file share permissions to allow users to access their profiles on the file share.
