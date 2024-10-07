@@ -9,7 +9,7 @@ This guide covers the end-to-end process of setting up an Azure Virtual Desktop 
    - Set up a Virtual Machine (VM) and install ADDS and AD Connect to join Azure Entra ID (formerly Azure AD) for directory synchronization and authentication.
    
 2. **Installing Active Directory Domain Services (ADDS) and AD Connect:**
-   - Walkthrough for setting up ADDS and AD Connect to sync your on-premises directory with Azure AD.
+   - Setting up ADDS and AD Connect to sync your on-premises directory with Azure AD.
 
 3. **Creating Users and Security Groups:**
    - Create necessary Active Directory users and security groups that will be used for file share access and AVD deployment.
