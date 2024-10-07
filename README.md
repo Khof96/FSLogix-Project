@@ -1,6 +1,6 @@
 # FSLogix-Project
 
-# Azure Virtual Desktop (AVD) Setup with FSLogix Profile Container
+## Azure Virtual Desktop (AVD) Setup with FSLogix Profile Container
 
 This guide covers the end-to-end process of setting up an Azure Virtual Desktop (AVD) environment using FSLogix Profile Containers for profile management. This includes configuring Active Directory Domain Services (ADDS), Azure AD Connect, creating a file share, setting up permissions, and installing FSLogix.
 
