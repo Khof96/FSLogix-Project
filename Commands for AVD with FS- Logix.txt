@@ -1,0 +1,39 @@
+Identity based Auth:
+
+- Set-ExecutionPolicy -ExecutionPolicy Unrestricted -Scope CurrentUser
+
+- Install-PackageProvider -Name NuGet -Force
+
+- cd .. or cd (AzFilesHybrid)
+
+- Import-Module -Name .\AzFilesHybrid.psd1
+
+- Connect-AzAccount
+
+- join-AzStorageaccountForAuth -ResourceGroupName "rg-avd-test" -Name "fslogixavdtest1" -DomainAccountType "ComputerAccount" -OrganizationalUnitDistinguishedName "CN=Computers,DC=virtual-dba,DC=com"
+
+Refer to document - https://crtech.tips/setting-up-fslogix-with-azure-virtual-desktop/#:~:text=Setting%20up%20FSLogix%20with%20Azure%20Virtual%20Desktop%201,your%20AVD%20host%20pool%206%20Test%20the%20results.
+--------------------------------------------------------------------------------------------------------------
+
+FS Logix - 
+
+NTFS : 
+ 1]
+net use <desired-drive-letter>: \\<storage-account-name>.file.core.windows.net\<share-name> <storage-account-key> /user:Azure\<storage-account-name>
+
+2]
+icacls <mounted-drive-letter>: /grant "<DOMAIN\GroupName>:(M)"
+icacls <mounted-drive-letter>: /grant "Creator Owner:(OI)(CI)(IO)(M)"
+icacls <mounted-drive-letter>: /remove "Authenticated Users"
+icacls <mounted-drive-letter>: /remove "Builtin\Users"
+
+
+
+Profile containner permissions - 
+
+$regPath = "HKLM:\SOFTWARE\FSLogix\profiles"
+New-ItemProperty -Path $regPath -Name Enabled -PropertyType DWORD -Value 1 -Force
+New-ItemProperty -Path $regPath -Name VHDLocations -PropertyType MultiString -Value \\<storage-account-name>.file.core.windows.net\<share-name> -Force
+
+
+Doc Refer - https://learn.microsoft.com/en-us/azure/virtual-desktop/fslogix-profile-container-configure-azure-files-active-directory?tabs=adds
